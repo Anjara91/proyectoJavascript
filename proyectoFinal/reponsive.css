@@ -1,0 +1,35 @@
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #contenedor {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .producto {
+        flex: 1 1 100%;
+        max-width: none;
+    }
+
+    #icons {
+        margin-top: 10px;
+    }
+
+    .carrito {
+        width: 90%;
+    }
+}
+
+@media (min-width: 769px) {
+    .producto {
+        flex: 1 1 20%;
+    }
+}

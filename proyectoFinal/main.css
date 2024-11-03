@@ -1,0 +1,118 @@
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+}
+
+.producto {
+    border: 3px solid yellowgreen;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 16px;
+    margin: 10px;
+    width: 20%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0, 3s ease;
+    box-shadow: 0, 3s ease;
+    cursor: pointer
+}
+
+.producto:hover {
+    border: yellowgreen;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px yellowgreen;
+}
+
+button {
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: greenyellow;
+}
+
+.oculto {
+    transform: translateX(100%);
+}
+
+.carrito {
+    position: fixed;
+    right: 0;
+    top: 0;
+    max-height: 90vh;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid black;
+    z-index: 10;
+    overflow-y: auto;
+}
+
+#agregCart {
+    background-color: #86999c;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    border: 2px solid #ccc;
+    color: white;
+    padding: 7px;
+
+}
+
+#carritoIcon {
+    color: lightgray;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+}
+
+.oculto {
+    transform: translateX(100%);
+}
+
+.carrito h2 {
+    margin-top: 0;
+}
+
+.carrito button {
+    padding: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.carrito button:hover {
+    background-color: greenyellow;
+}
+
+#tabla-carrito {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabla-carrito td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+#tabla-carrito tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.contador {
+    position: absolute;
+    top: 0;
+    right: 14;
+    background-color: yellowgreen;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 10px;
+    margin: 10px -3px;
+}
