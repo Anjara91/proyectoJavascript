@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mostrar los productos en la página
     const mostrarProductos = () => {
+        productosContainer.innerHTML = ''; // Limpiar productos antes de mostrar
         productos.forEach(producto => {   
             const divProducto = crearProductoElemento(producto);
             productosContainer.appendChild(divProducto);
@@ -160,12 +161,21 @@ document.addEventListener('DOMContentLoaded', () => {
             if (carrito.length === 0) {
                 alert('El carrito está vacío');
             } else {
+                carrito.forEach(item => {
+                    const producto = productos.find(prod => prod.id === item.id);
+                    if (producto) {
+                        producto.stock -= item.cantidad;
+                    }
+                });
+
                 alert('Compra realizada con éxito');
-                carrito.length = 0; 
+
+               
+                carrito.length = 0;
                 totalSpan.textContent = '0.00';
                 listaCarrito.innerHTML = '';
-                productos.forEach(prod => prod.stock = 15); 
-                actualizarContadorCarrito();
+                actualizarContadorCarrito(); 
+                mostrarProductos(); 
             }
         });
     };
